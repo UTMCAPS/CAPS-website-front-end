@@ -59,6 +59,8 @@ body {
 }
 .header-container {
   padding-top: 20px;
+  padding-left: 50px;
+  position: fixed;
 }
 .header-component {
   border-radius: 30px;

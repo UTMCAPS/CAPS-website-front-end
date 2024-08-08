@@ -38,7 +38,6 @@ body {
   margin: 0 auto;
   height: 90px;
   width: calc(100vw - 100px);
-  border-top: 3px solid rgba(31, 57, 121, 0.3);
   display: flex;
   justify-content: center;
   gap: 10px;
