@@ -8,7 +8,7 @@ export default {
   <br>
   <div class="one-line-object">
     <div class="object-image">
-      <img src="../assets/title-icon.png" alt="#">
+      <img src="@/assets/title-icon.png" alt="#">
     </div>
     <div class="object-text">
       <h3>Freshman 1v1 Course Selection</h3>
