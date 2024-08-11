@@ -8,13 +8,13 @@ export default {
   <br>
   <div class="imageLineUp3">
     <div class="image-container">
-      <img src="../assets/title-icon.png" alt="#">
+      <img src="@/assets/title-icon.png" alt="#">
     </div>
     <div class="image-container">
-      <img src="../assets/title-icon.png" alt="#">
+      <img src="@/assets/title-icon.png" alt="#">
     </div>
     <div class="image-container">
-      <img src="../assets/title-icon.png" alt="#">
+      <img src="@/assets/title-icon.png" alt="#">
     </div>
   </div>
   <br>
