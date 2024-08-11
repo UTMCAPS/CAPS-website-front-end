@@ -9,7 +9,7 @@ export default {
     <div class="header-component">
       <div class="title">
         <div class="title-icon">
-          <img src="../assets/title-icon.png" alt="img"/>
+          <img src="@/assets/title-icon.png" alt="img"/>
         </div>
         <div class="title-text">
           <h2>UTMCAPS</h2>
