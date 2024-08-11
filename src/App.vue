@@ -1,26 +1,34 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <top-nav/>
+  <home-page/>
+  <bot-link/>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import topNav from "@/components/topNav.vue";
+import botLink from "@/components/botLink.vue";
+import homePage from "@/components/homePage.vue";
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    topNav,
+    homePage,
+    botLink
   }
 }
 </script>
 
 <style>
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+}
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  font-family: Arial, sans-serif;
+  background-image: url("assets/background.svg");
+  background-size: cover;
 }
 </style>
