@@ -9,12 +9,12 @@ export default {
     <div class="footer-component">
       <a href="https://www.xiaohongshu.com/user/profile/644218b30000000029017b0e" style="--clr:rgba(255, 39, 66, 0.5);">
         <div class="platform-icon">
-          <img src="../assets/xhs-icon.png" alt="img"/>
+          <img src="@/assets/xhs-icon.png" alt="img"/>
         </div>
       </a>
       <a href="https://mp.weixin.qq.com/s/KKqrqc932DDj5twbSjU7hw" style="--clr:rgba(45, 193, 0, 0.5);">
         <div class="platform-icon">
-          <img src="../assets/wechat-icon.png" alt="img"/>
+          <img src="@/assets/wechat-icon.png" alt="img"/>
         </div>
       </a>
     </div>
