@@ -26,7 +26,7 @@ export default {
         </div>
       </div>
       <div class="description-image">
-        <img src="../assets/title-icon.png" alt="#">
+        <img src="@/assets/title-icon.png" alt="#">
       </div>
     </div>
     <div class="events">
@@ -75,7 +75,7 @@ export default {
         </div>
       </div>
       <div class="more-about-image">
-        <img src="../assets/title-icon.png" alt="#">
+        <img src="@/assets/title-icon.png" alt="#">
       </div>
     </div>
   </div>
