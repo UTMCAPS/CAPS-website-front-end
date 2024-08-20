@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        .filter-section {
+            padding: 30px;
+            background-color: #e7f0f9;
+            border-radius: 8px;
+            margin: 20px auto;
+            text-align: center;
+            max-width: 900px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .filter-section h2 {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            color: #004aad;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        .input-group input {
+            margin: 0 10px;
+            padding: 10px;
+            width: 180px;
+            border: 1px solid #cfd4d9;
+            border-radius: 5px;
+        }
+
+        .button-group {
+            display: inline-block;
+        }
+
+        .button-group button {
+            padding: 10px 20px;
+            margin: 10px 5px;
+            background-color: #004aad;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+        }
+
+        .button-group button:hover {
+            background-color: #003780;
+        }
+
+        .project-list-section {
+            padding: 30px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            margin: 20px auto;
+            text-align: center;
+            max-width: 900px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .project-list-section table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .project-list-section th, 
+        .project-list-section td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+            font-size: 0.9em;
+        }
+
+        .project-list-section th {
+            background-color: #f1f1f1;
+            color: #333;
+            
+        }
+
+        .project-list-section .no-projects {
+            text-align: center;
+            color: #999;
+            padding: 30px 0;
+        }
+
+        table thead {
+            border-top: 1px solid #ddd;
+            border-bottom: 2px solid #ddd;
+        }
+
+        table thead th {
+            font-weight: bold;
+        }
+
+        table tbody tr:hover {
+            background-color: #f9f9f9;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="filter-section">
+        <h2>Filter ROP Projects</h2>
+        <form id="filter-form">
+            <div class="input-group">
+                <input type="text" id="session-code-1" placeholder="Session Code">
+                <input type="text" id="session-code-2" placeholder="Session Code">
+                <input type="text" id="session-code-3" placeholder="Session Code">
+            </div>
+            <div class="button-group">
+                <button type="button" id="filter-button">Filter Projects</button>
+                <button type="button" id="clear-button">Clear Filters</button>
+            </div>
+        </form>
+    </div>
+    
+    <!-- Project List Section -->
+    <div class="project-list-section">
+        <table>
+            <thead>
+                <tr>
+                    <th>Session Code</th>
+                    <th>Project Number</th>
+                    <th>Course Credit</th>
+                    <th>Project Title</th>
+                    <th>Instructor Name</th>
+                    <th>Request Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Rows of projects will be dynamically added here -->
+                <tr>
+                    <td colspan="6" class="no-projects">No projects available</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
