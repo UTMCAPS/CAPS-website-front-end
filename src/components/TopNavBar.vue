@@ -68,6 +68,11 @@ body {
 .navbar .logo {
   margin-left: 2%;
 }
+
+.navbar .logo img {
+  transform: scale(1.1);
+}
+
 .navbar .brand {
   text-decoration: none;
   font-size: 2rem;
