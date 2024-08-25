@@ -1,34 +1,40 @@
 <template>
-  <top-nav/>
-  <home-page/>
-  <bot-link/>
+  <div id="app">
+    <TopNavBar class="top-nav"/>
+    <router-view />
+    <bot-link />
+  </div>
 </template>
 
 <script>
-import topNav from "@/components/topNav.vue";
+import TopNavBar from "@/components/TopNavBar.vue";
 import botLink from "@/components/botLink.vue";
-import homePage from "@/components/homePage.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    topNav,
-    homePage,
-    botLink
-  }
-}
+    TopNavBar,
+    botLink,
+  },
+};
 </script>
 
 <style>
 body {
   margin: 0;
   padding: 0;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
 }
 #app {
   font-family: Arial, sans-serif;
-  background-image: url("assets/background.svg");
+  /* background-image: url("assets/background.svg"); */
   background-size: cover;
+}
+.top-nav{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
 }
 </style>

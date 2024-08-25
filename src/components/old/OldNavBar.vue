@@ -1,6 +1,6 @@
 <script>
 export default {
-  name: 'top-nav'
+  name: 'top-nav-old'
 }
 </script>
 
