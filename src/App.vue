@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <TopNavBar class="top-nav"/>
-    <router-view />
+    <TopNavBar class="top-nav" />
+    <router-view class="router"/>
     <bot-link />
   </div>
 </template>
@@ -20,9 +20,13 @@ export default {
 </script>
 
 <style>
+:root {
+  --top-nav-height: 85px;
+}
 body {
   margin: 0;
   padding: 0;
+  width: calc(100vw - 100px);
   width: 100%;
   height: 100vh;
 }
@@ -36,5 +40,9 @@ body {
   top: 0;
   width: 100%;
   z-index: 1000;
+  height: var(--top-nav-height);
+}
+.router{
+  margin-top: calc(var(--top-nav-height));
 }
 </style>
