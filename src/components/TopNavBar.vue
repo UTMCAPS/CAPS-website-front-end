@@ -7,9 +7,14 @@
       <strong>UTMCAPS</strong>
     </div>
     <div class="nav-continer">
+<<<<<<< HEAD
       <div class="nav-item">
         <router-link href="#home" to="/">Home</router-link>
       </div>
+=======
+      <div class="nav-item"><router-link to="/">Home</router-link></div>
+
+>>>>>>> 0790217 (Add home router)
       <div class="nav-item">
         <a href="#programs-events">About Us</a>
         <div class="dropdown-content">
