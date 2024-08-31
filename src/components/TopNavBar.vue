@@ -12,7 +12,7 @@
       <div class="nav-item">
         <a href="#programs-events">About Us</a>
         <div class="dropdown-content">
-          <a href="#people">People Directory</a>
+          <router-link to="/people">People Directory</router-link>
           <a href="#financial">Financial Information</a>
         </div>
       </div>
