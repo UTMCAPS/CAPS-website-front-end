@@ -96,6 +96,7 @@ body {
   align-items: center;
   justify-content: center;
   font-weight: bold;
+  transition: 0.5s;
 }
 .navbar .nav-item:hover {
   background-color: #546182;
@@ -135,7 +136,10 @@ body {
   background-color: #546182;
 }
 
-.dropdown-content a:nth-child(1) {animation-delay: calc(0);}
+.dropdown-content a:nth-child(1) {
+  animation-delay: calc(0);
+  margin-top: 3px;
+}
 .dropdown-content a:nth-child(2) {animation-delay: calc(0.1s);}
 .dropdown-content a:nth-child(3) {animation-delay: calc(0.2s);}
 .dropdown-content a:nth-child(4) {animation-delay: calc(0.3s);}
