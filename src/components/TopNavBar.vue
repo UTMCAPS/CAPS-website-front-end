@@ -8,7 +8,7 @@
     </div>
     <div class="nav-continer">
       <div class="nav-item">
-        <router-link href="#home" to="/home">Home</router-link>
+        <router-link href="#home" to="/">Home</router-link>
       </div>
       <div class="nav-item">
         <a href="#programs-events">About Us</a>

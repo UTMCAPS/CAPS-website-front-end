@@ -11,7 +11,7 @@ import UpcomingEvents from "@/views/EventPage.vue";
 import UtmropList from "@/views/UtmropList.vue";
 const routes = [
   {
-    path: "/",
+    path: "/about-us",
     name: "AboutUs",
     component: AboutUs,
   },
@@ -21,17 +21,17 @@ const routes = [
     component: ContactUs,
   },
   {
-    path: "/",
+    path: "/event",
     name: "EventPage",
     component: UpcomingEvents,
   },
   {
-    path: "/",
+    path: "/financial-information",
     name: "FinancialInformation",
     component: FinancialInformation,
   },
   {
-    path: "/home",
+    path: "/",
     name: "HomePage",
     component: HomePage,
   },
@@ -46,17 +46,17 @@ const routes = [
     component: PeopleDirectory,
   },
   {
-    path: "/",
+    path: "/post",
     name: "PostsPage",
     component: Posts,
   },
   {
-    path: "/",
+    path: "/resources",
     name: "ResourcesPage",
     component: Resources,
   },
   {
-    path: "/",
+    path: "/utm-rop-list",
     name: "UtmropList",
     component: UtmropList,
   }
