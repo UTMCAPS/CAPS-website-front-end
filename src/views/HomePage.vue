@@ -132,7 +132,6 @@ body {
   border-radius: 30px;
   margin: 0 auto;
   width: calc(100vw - 100px);
-  width: 100%;
 }
 .description {
   width: inherit;

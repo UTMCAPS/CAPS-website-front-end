@@ -1,14 +1,15 @@
 <template>
   <div class="navbar">
     <div class="logo">
-      <img src="@/assets/title-icon.png" alt="logo" width="80" height="80" />
+      <img src="@/assets/title-icon.png" alt="logo" width="80" height="80"/>
     </div>
     <div class="brand">
       <strong>UTMCAPS</strong>
     </div>
     <div class="nav-continer">
-      <div class="nav-item"><a href="#home">Home</a></div>
-
+      <div class="nav-item">
+        <router-link href="#home" to="/">Home</router-link>
+      </div>
       <div class="nav-item">
         <a href="#programs-events">About Us</a>
         <div class="dropdown-content">
@@ -31,7 +32,7 @@
       </div>
 
       <div class="nav-item">
-        <a href="#contact-us">Contact Us</a>
+        <router-link href="#contact-us" to="/contact-us">Contact Us</router-link>
       </div>
     </div>
   </div>
@@ -82,9 +83,11 @@ body {
   flex-basis: 25%;
   letter-spacing: 0.5px;
 }
+
 .navbar .brand strong {
   display: block;
 }
+
 .navbar .nav-item {
   position: relative;
   flex-basis: 15%;
@@ -98,9 +101,11 @@ body {
   font-weight: bold;
   transition: 0.5s;
 }
+
 .navbar .nav-item:hover {
   background-color: #546182;
 }
+
 .navbar a {
   color: white;
   text-decoration: none;
@@ -140,9 +145,18 @@ body {
   animation-delay: calc(0);
   margin-top: 3px;
 }
-.dropdown-content a:nth-child(2) {animation-delay: calc(0.1s);}
-.dropdown-content a:nth-child(3) {animation-delay: calc(0.2s);}
-.dropdown-content a:nth-child(4) {animation-delay: calc(0.3s);}
+
+.dropdown-content a:nth-child(2) {
+  animation-delay: calc(0.1s);
+}
+
+.dropdown-content a:nth-child(3) {
+  animation-delay: calc(0.2s);
+}
+
+.dropdown-content a:nth-child(4) {
+  animation-delay: calc(0.3s);
+}
 
 .nav-item:hover .dropdown-content {
   display: block;
