@@ -1,12 +1,12 @@
 <template>
   <div class="PersonCard">
     <div class="container">
-    <img src="@/assets/logo.png" alt="self-photo" class="self-photo">
-    <div class="self-info">
-      <h2 class="name">姓名</h2>
-      <p class="role">My position</p>
-      <p class="major">CS Spec. + STA Major + Math Minor</p>
-    </div>
+      <img src="@/assets/logo.png" alt="self-photo" class="self-photo" />
+      <div class="self-info">
+        <h2 class="name">姓名</h2>
+        <p class="role">My position</p>
+        <p class="major">CS Spec. + STA Major + Math Minor</p>
+      </div>
     </div>
   </div>
 </template>
@@ -33,15 +33,17 @@ export default {
 .container {
   display: block;
   text-align: center;
+  padding-bottom: 5px;
+  border-bottom: 2px solid #424242b3;
 }
 
 .self-photo {
   border-radius: 50%;
 }
-.name{
+.name {
   color: #1f3979;
 }
-.major{
+.major {
   color: #a52a2a;
 }
 </style>

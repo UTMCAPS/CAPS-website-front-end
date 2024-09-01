@@ -131,12 +131,7 @@ body {
   padding-top: 100px;
   border-radius: 30px;
   margin: 0 auto;
-<<<<<<< HEAD
   width: calc(100vw - 100px);
-=======
-  /* width: calc(100vw - 100px); */
-  /* width: 100%; */
->>>>>>> ff39dcc (Resovle NavBar position issue)
 }
 .description {
   width: inherit;

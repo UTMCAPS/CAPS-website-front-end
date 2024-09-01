@@ -7,17 +7,12 @@
       <strong>UTMCAPS</strong>
     </div>
     <div class="nav-continer">
-<<<<<<< HEAD
-      <div class="nav-item">
+      <div class="nav-item" @click="showPage(``)">
         <router-link href="#home" to="/">Home</router-link>
       </div>
-=======
-      <div class="nav-item"><router-link to="/">Home</router-link></div>
-
->>>>>>> 0790217 (Add home router)
       <div class="nav-item">
         <a href="#programs-events">About Us</a>
-        <div class="dropdown-content">
+        <div class="dropdown-content" @click="showPage(`people`)">
           <router-link to="/people">People Directory</router-link>
           <a href="#financial">Financial Information</a>
         </div>
@@ -36,7 +31,7 @@
         </div>
       </div>
 
-      <div class="nav-item">
+      <div class="nav-item" @click="showPage(`contact-us`)">
         <router-link href="#contact-us" to="/contact-us">Contact Us</router-link>
       </div>
     </div>
@@ -48,6 +43,11 @@ export default {
   name: "TopNav",
   setup() {
     return {};
+  },
+  methods: {
+    showPage(targetPage)  {
+      this.$router.push({ path: `/${targetPage}` });
+    }
   },
 };
 </script>
