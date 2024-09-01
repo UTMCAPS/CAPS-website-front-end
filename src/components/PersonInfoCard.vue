@@ -42,7 +42,6 @@ export default {
   color: #1f3979;
 }
 .major{
-  color: #1f3979;
   color: #a52a2a;
 }
 </style>
