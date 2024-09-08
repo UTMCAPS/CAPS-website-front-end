@@ -56,7 +56,7 @@ const routes = [
     component: Resources,
   },
   {
-    path: "/utm-rop-list",
+    path: "/utmropList",
     name: "UtmropList",
     component: UtmropList,
   }
