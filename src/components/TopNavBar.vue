@@ -17,8 +17,8 @@
           <a href="#financial">Financial Information</a>
         </div>
       </div>
-      <div class="nav-item">
-        <a href="#events">Event</a>
+      <div class="nav-item" @click="showPage(`event`)">
+        <router-link to="/event" >Event</router-link>
         <div class="dropdown-content">
           <!-- <a href="#wechat-official">WeChat Official</a> -->
         </div>
