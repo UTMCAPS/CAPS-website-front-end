@@ -27,7 +27,7 @@
         <a href="#resources">Resources</a>
         <div class="dropdown-content">
           <a href="#post">Posts</a>
-          <a href="#rop-list">UTM ROP List</a>
+          <router-link to="/UtmropList">UTM ROP List</router-link>
         </div>
       </div>
 
