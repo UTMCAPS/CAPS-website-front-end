@@ -16,6 +16,8 @@
   width: 100%;
   height: 100%;
   background: #1F3979;
+  color: #FFFFFF;
+  font-size: .9rem;
   display: flex;
   align-items: center;
   justify-content: center;

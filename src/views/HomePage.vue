@@ -70,12 +70,12 @@ export default {
 }
 .banner {
   width: 100vw;
-  height: 65vh;
+  height: 85vh;
   background: #1F3979;
 }
 .slogan {
   width: 100vw;
-  height: 20vh;
+  height: 15vh;
   background: #EEEEEE;
 }
 .about-us {
