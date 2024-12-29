@@ -80,7 +80,7 @@ export default {
 }
 .about-us {
   width: 100vw;
-  height: 100vh;
+  height: 120vh;
   background: #1F3979;
 }
 .events-this-week {

@@ -8,8 +8,6 @@
 //import TopNavBar from "@/components/TopNavBar.vue";
 //import botLink from "@/components/botLink.vue";
 
-// Hi here is chris
-
 export default {
   name: "App",
   components: {
