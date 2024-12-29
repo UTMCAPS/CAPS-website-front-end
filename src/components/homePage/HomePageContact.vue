@@ -17,7 +17,7 @@
   height: 100%;
   display: flex;
   align-items: center;
-  background: #1F3979;
+  background: #224886;
   gap: .5vw;
   padding-left: 1vw;
 }

@@ -2,6 +2,9 @@
   <div class="contact">
     <HomePageContact/>
   </div>
+  <div class="nav">
+    <NavigationBar/>
+  </div>
   <div class="banner">
     <HomePageBanner/>
   </div>
@@ -34,10 +37,12 @@ import HomePageEventsThisWeek from "@/components/homePage/HomePageEventsThisWeek
 import HomePageUpcomingEvents from "@/components/homePage/HomePageUpcomingEvents.vue";
 import HomePageJoinUs from "@/components/homePage/HomePageJoinUs.vue";
 import HomePageFooter from "@/components/homePage/HomePageFooter.vue";
+import NavigationBar from "@/components/NavigationBar.vue";
 
 export default {
   name: "HomePage",
   components: {
+    NavigationBar,
     HomePageFooter,
     HomePageJoinUs,
     HomePageUpcomingEvents,
@@ -56,39 +61,46 @@ export default {
   height: 5vh;
   background: #1F3979;
 }
+.nav {
+  width: 100vw;
+  height: 10vh;
+  background: #EEEEEE;
+  position: sticky;
+  top: 0;
+}
 .banner {
   width: 100vw;
-  height: 75vh;
-  background: #EEEEEE;
+  height: 65vh;
+  background: #1F3979;
 }
 .slogan {
   width: 100vw;
   height: 20vh;
-  background: #1F3979;
+  background: #EEEEEE;
 }
 .about-us {
   width: 100vw;
   height: 100vh;
-  background: #EEEEEE;
+  background: #1F3979;
 }
 .events-this-week {
   width: 100vw;
   height: 130vh;
-  background: #1F3979;
+  background: #EEEEEE;
 }
 .upcoming-events {
   width: 100vw;
   height: 80vh;
-  background: #EEEEEE;
+  background: #1F3979;
 }
 .join-us {
   width: 100vw;
   height: 20vh;
-  background: #1F3979;
+  background: #EEEEEE;
 }
 .footer {
   width: 100vw;
   height: 30vh;
-  background: #EEEEEE;
+  background: #1F3979;
 }
 </style>
