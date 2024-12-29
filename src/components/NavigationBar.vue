@@ -71,6 +71,6 @@ a {
   transition: .5s;
 }
 .navigation-item:hover a {
-  border-bottom: 3px solid #224886;
+  border-bottom: 2px solid rgba(34, 72, 134, 0.5);
 }
 </style>
