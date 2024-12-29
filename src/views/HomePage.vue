@@ -1,22 +1,51 @@
 <template>
-  <div class="contact"></div>
-  <div class="banner"></div>
-  <div class="slogan"></div>
-  <div class="about-us"></div>
-  <div class="events-this-week"></div>
-  <div class="upcoming-events"></div>
-  <div class="join-us"></div>
-  <div class="footer"></div>
+  <div class="contact">
+    <HomePageContact/>
+  </div>
+  <div class="banner">
+    <HomePageBanner/>
+  </div>
+  <div class="slogan">
+    <HomePageSlogan/>
+  </div>
+  <div class="about-us">
+    <HomePageAboutUs/>
+  </div>
+  <div class="events-this-week">
+    <HomePageEventsThisWeek/>
+  </div>
+  <div class="upcoming-events">
+    <HomePageUpcomingEvents/>
+  </div>
+  <div class="join-us">
+    <HomePageJoinUs/>
+  </div>
+  <div class="footer">
+    <HomePageFooter/>
+  </div>
 </template>
 
 <script>
-//import oneLineObject from "@/components/oneLineObject.vue";
-//import imageLineUp3 from "@/components/imageLineUp3.vue";
+import HomePageContact from "@/components/homePage/HomePageContact.vue";
+import HomePageBanner from "@/components/homePage/HomePageBanner.vue";
+import HomePageSlogan from "@/components/homePage/HomePageSlogan.vue";
+import HomePageAboutUs from "@/components/homePage/HomePageAboutUs.vue";
+import HomePageEventsThisWeek from "@/components/homePage/HomePageEventsThisWeek.vue";
+import HomePageUpcomingEvents from "@/components/homePage/HomePageUpcomingEvents.vue";
+import HomePageJoinUs from "@/components/homePage/HomePageJoinUs.vue";
+import HomePageFooter from "@/components/homePage/HomePageFooter.vue";
+
 export default {
   name: "HomePage",
   components: {
-    //oneLineObject,
-    //imageLineUp3,
+    HomePageFooter,
+    HomePageJoinUs,
+    HomePageUpcomingEvents,
+    HomePageEventsThisWeek,
+    HomePageAboutUs,
+    HomePageSlogan,
+    HomePageBanner,
+    HomePageContact
   },
 };
 </script>
