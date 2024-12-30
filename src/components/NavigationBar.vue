@@ -69,6 +69,7 @@ body {
 a {
   text-decoration: none;
   color: #000000;
+  border: 2px solid transparent;
   transition: .5s;
 }
 .navigation-item:hover a {
