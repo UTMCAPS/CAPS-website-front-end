@@ -1,7 +1,3 @@
-<script setup>
-
-</script>
-
 <template>
   <div class="container">
     <div class="logo">
@@ -10,7 +6,7 @@
         UTMCAPS
       </h1>
     </div>
-    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1F3979"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1F3979" @click="arrowClick()"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg>
     <div class="details">
       <b>C</b>hinese<br>
       <b>A</b>cademic<br>
@@ -19,6 +15,21 @@
     </div>
   </div>
 </template>
+
+<script>
+  export default {
+    name: "HomePageBanner",
+    methods: {
+      arrowClick() {
+        const slogan = document.querySelector('.slogan');
+        if(slogan){
+          slogan.scrollIntoView({ behavior: 'smooth' });
+        }
+      },
+    },
+  };
+</script>
+
 
 <style scoped>
 .container {
@@ -40,15 +51,18 @@
 }
 svg {
   position: absolute;
-  bottom: 2vh;
+  bottom: -40px;
   width: 5vw;
   height: 5vw;
   animation: arrow 2s infinite;
 }
+svg:hover {
+  cursor: pointer;
+}
 @keyframes arrow {
   0% {
     opacity: 0;
-    transform: translateY(-30px);
+    transform: translateY(-20px);
   }
   0% {
     opacity: 1;
@@ -71,13 +85,14 @@ img {
   color: #FFFFFF;
   filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.5));
   font-size: 4rem;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: 'Ibarra Real Nova','Times New Roman', Times, serif;
 }
 .details {
   font-size: 4rem;
   font-weight: bold;
   position: absolute;
-  right: 2vw;
+  /* right: 2vw; */
+  left: 71vw;
   color: #FFFFFF;
   filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.5));
 }
