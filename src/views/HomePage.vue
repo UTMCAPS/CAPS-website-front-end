@@ -108,7 +108,7 @@ export default {
 }
 .footer {
   width: 100vw;
-  height: 30vh;
+  height: 10vh;
   background: #1F3979;
 }
 </style>
