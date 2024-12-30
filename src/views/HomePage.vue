@@ -52,6 +52,12 @@ export default {
     HomePageBanner,
     HomePageContact
   },
+  mounted () {
+    const nav = document.querySelector('.nav');
+    if(nav){
+      nav.scrollIntoView({ behavior: 'smooth' });
+    }
+  },
 };
 </script>
 
@@ -67,15 +73,17 @@ export default {
   background: #EEEEEE;
   position: sticky;
   top: 0;
+  z-index: 1;
 }
 .banner {
   width: 100vw;
-  height: 85vh;
+  height: 90vh;
   background: #1F3979;
 }
 .slogan {
   width: 100vw;
-  height: 15vh;
+  height: 20vh;
+  scroll-margin-top: 10vh;
   background: #EEEEEE;
 }
 .about-us {
