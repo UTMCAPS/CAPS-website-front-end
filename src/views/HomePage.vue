@@ -93,7 +93,7 @@ export default {
 }
 .events-this-week {
   width: 100vw;
-  height: 130vh;
+  height: 150vh;
   background: #EEEEEE;
 }
 .upcoming-events {
