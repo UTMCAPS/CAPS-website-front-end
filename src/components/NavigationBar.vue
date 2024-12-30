@@ -39,6 +39,8 @@ body {
 .container {
   width: 100%;
   height: 10vh;
+  padding-top: 10px;
+  padding-bottom: 10px;
   background-color: #FFFFFF;
   display: flex;
   align-items: center;
