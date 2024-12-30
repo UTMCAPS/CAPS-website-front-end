@@ -14,13 +14,13 @@
       <router-link href="#event" to="/event" >Event</router-link>
     </div>
     <div class="logo">
-      <img src="../../assets/png/homePage/logo-blue-s.png" alt="logo" />
+      <img src="@/assets/png/homePage/logo-blue-s.png" alt="logo" />
       <h1 class="title">
         UTMCAPS
       </h1>
     </div>
     <div class="navigation-item">
-      <router-link href="ropList" to="/UtmropList">Resources</router-link>
+      <router-link href="#ropList" to="/utmropList">Resources</router-link>
     </div>
     <div class="navigation-item">
       <router-link href="#contact-us" to="/contact-us">Media</router-link>
