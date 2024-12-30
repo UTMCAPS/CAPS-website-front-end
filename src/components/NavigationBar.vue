@@ -11,7 +11,7 @@
       <router-link to="/people">About Us</router-link>
     </div>
     <div class="navigation-item">
-      <router-link to="/event" >Event</router-link>
+      <router-link href="#event" to="/event" >Event</router-link>
     </div>
     <div class="logo">
       <img src="@/assets/png/homePage/logo-blue-s.png" alt="logo" />
@@ -20,7 +20,7 @@
       </h1>
     </div>
     <div class="navigation-item">
-      <router-link to="/UtmropList">Resources</router-link>
+      <router-link href="ropList" to="/UtmropList">Resources</router-link>
     </div>
     <div class="navigation-item">
       <router-link href="#contact-us" to="/contact-us">Media</router-link>
