@@ -69,7 +69,7 @@ svg:hover {
   }
   100% {
     opacity: 0;
-    transform: translateX(0);
+    transform: translateY(0);
   }
 }
 img {

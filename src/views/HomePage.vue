@@ -26,6 +26,9 @@
   <div class="footer">
     <HomePageFooter/>
   </div>
+  <div class="jump-to-top" @click="scrollToTop">
+    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1F3979"><path d="M480-528 296-344l-56-56 240-240 240 240-56 56-184-184Z"/></svg>
+  </div>
 </template>
 
 <script>
@@ -37,7 +40,7 @@ import HomePageEventsThisWeek from "@/components/homePage/HomePageEventsThisWeek
 import HomePageUpcomingEvents from "@/components/homePage/HomePageUpcomingEvents.vue";
 import HomePageJoinUs from "@/components/homePage/HomePageJoinUs.vue";
 import HomePageFooter from "@/components/homePage/HomePageFooter.vue";
-import NavigationBar from "@/components/NavigationBar.vue";
+import NavigationBar from "@/components/concrete/NavigationBar.vue";
 
 export default {
   name: "HomePage",
@@ -58,6 +61,15 @@ export default {
       nav.scrollIntoView({ behavior: 'smooth' });
     }
   },
+  methods: {
+    scrollToTop() {
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: "smooth",
+      });
+    }
+  }
 };
 </script>
 
@@ -88,12 +100,12 @@ export default {
 }
 .about-us {
   width: 100vw;
-  height: 120vh;
+  height: 90vh;
   background: #1F3979;
 }
 .events-this-week {
   width: 100vw;
-  height: 130vh;
+  height: 150vh;
   background: #EEEEEE;
 }
 .upcoming-events {
@@ -103,12 +115,48 @@ export default {
 }
 .join-us {
   width: 100vw;
-  height: 20vh;
+  height: 30vh;
   background: #EEEEEE;
 }
 .footer {
   width: 100vw;
-  height: 30vh;
+  height: 10vh;
   background: #1F3979;
+}
+.jump-to-top {
+  width: 7vh;
+  height: 7vh;
+  position: fixed;
+  background-color: #FFFFFF;
+  bottom: 5%;
+  right: 5%;
+  border-radius: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  opacity: .7;
+  transition: .5s;
+}
+.jump-to-top:hover {
+  opacity: 1;
+}
+svg {
+  width: 150%;
+  height: 150%;
+  animation: arrow 2s infinite;
+}
+@keyframes arrow {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
 }
 </style>
