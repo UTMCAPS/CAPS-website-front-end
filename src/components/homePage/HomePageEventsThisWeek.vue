@@ -1,6 +1,6 @@
 <script setup>
-import SingleShowCaseLeft from "@/components/SingleHorizontalShowCaseLeft.vue";
-import SingleShowCaseRight from "@/components/SingleHorizontalShowCaseRight.vue";
+import SingleShowCaseLeft from "@/components/concrete/ShowCaseLeft.vue";
+import SingleShowCaseRight from "@/components/concrete/ShowCaseRight.vue";
 </script>
 
 <script>

@@ -3,13 +3,13 @@
 </script>
 
 <template>
-  <div class="box">
+  <div class="card">
 
   </div>
 </template>
 
 <style scoped>
-.box {
+.card {
   width: 100%;
   height: 100%;
   background-color: rgba(255, 182, 193, 0.5);

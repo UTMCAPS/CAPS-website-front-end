@@ -14,7 +14,7 @@
       <router-link href="#event" to="/event" >Event</router-link>
     </div>
     <div class="logo">
-      <img src="@/assets/png/homePage/logo-blue-s.png" alt="logo" />
+      <img src="../../assets/png/homePage/logo-blue-s.png" alt="logo" />
       <h1 class="title">
         UTMCAPS
       </h1>

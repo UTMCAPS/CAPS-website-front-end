@@ -1,6 +1,6 @@
 <script setup>
 
-import QueueShowCase from "@/components/QueueShowCase.vue";
+import QueueShowCase from "@/components/concrete/ShowCaseQueue.vue";
 </script>
 
 <template>

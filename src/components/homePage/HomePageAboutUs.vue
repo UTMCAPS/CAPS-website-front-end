@@ -1,5 +1,5 @@
 <script setup>
-import SingleVerticalShowCase from "@/components/SingleVerticalShowCase.vue";
+import SingleVerticalShowCase from "@/components/concrete/ShowCaseVertical.vue";
 </script>
 
 <script>

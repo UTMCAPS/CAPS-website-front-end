@@ -40,7 +40,7 @@ import HomePageEventsThisWeek from "@/components/homePage/HomePageEventsThisWeek
 import HomePageUpcomingEvents from "@/components/homePage/HomePageUpcomingEvents.vue";
 import HomePageJoinUs from "@/components/homePage/HomePageJoinUs.vue";
 import HomePageFooter from "@/components/homePage/HomePageFooter.vue";
-import NavigationBar from "@/components/NavigationBar.vue";
+import NavigationBar from "@/components/concrete/NavigationBar.vue";
 
 export default {
   name: "HomePage",
@@ -135,6 +135,11 @@ export default {
   justify-content: center;
   align-items: center;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  opacity: .7;
+  transition: .5s;
+}
+.jump-to-top:hover {
+  opacity: 1;
 }
 svg {
   width: 150%;
