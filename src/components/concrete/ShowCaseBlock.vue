@@ -17,121 +17,116 @@ export default {
       type: String,
       default: "jpg/homePage/placeholder-who-we-are.jpg"
     },
+    page: {
+      type: String,
+      default: "/default"
+    }
   },
 };
 </script>
 
 <template>
   <div class="card">
-    <img class="image" :src="require('@/assets/' + image)" alt="Event Image" />
+    <div class="image">
+      <img :src="require('@/assets/' + image)" alt=""/>
+    </div>
     <div class="content">
-      <div class="content-text">
-        <h3 class="title">{{ title }}</h3>
-        <div class="date">
-          <p class="date-line">|</p>
-          <p class="date-text">{{ date }}</p>
-        </div>
-        <p class="description">{{ description }}</p>
+      <h1>{{ title }}</h1>
+      <div class="date">
+        <p>{{ date }}</p>
       </div>
-      <div class="content-button">
-        <button class="arrow-button">→</button>
+      <div class="description">
+        <p>{{ description }}</p>
       </div>
+      <router-link class="button" to={{page}} >
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#024BAF"><path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z"/></svg>
+      </router-link>
     </div>
   </div>
 </template>
 
 <style scoped>
 .card {
+  width: 100%;
+  height: 80%;
+  background-color: #FFFFFF;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+  position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  width: 100%;
-  margin-left: 15%;
-  margin-right: 15%;
-  height: 80%;
-  background-color: white;
-  overflow: hidden;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease;
+  justify-content: center;
+  align-items: center;
 }
-
 .card:hover {
-  transform: scale(1.05);
+  transform: scale(1.1);
 }
-
 .image {
   width: 100%;
   height: 50%;
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
 }
-
 .content {
+  width: 100%;
   height: 50%;
-  display: flex;
-  justify-content: space-between;
-  padding: 5%;
+  position: absolute;
+  bottom: 0;
+  padding-left: 3vw;
 }
-
-.content-text {
-  display: flex;
-  flex-direction: column;
-  width: 80%;
+h1 {
+  color: #0051B1;
+  font-size: 1.7rem;
+  padding-bottom: 0;
+  margin-bottom: 0;
 }
-
-.title {
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: #0051b1;
-  margin: 2% 0%;
+p {
+  color: #8F8F8F;
+  padding: 1%;
+  margin: 0;
 }
-
 .date {
-  display: flex;
-  align-items: center;
+  border-color: #0051B1;
+  border-width: 2px;
+  border-left-style: solid;
+  padding-left: 1vw;
 }
-
-.date-line {
-  font-size: 1rem;
-  color: #0051b1;
-  font-weight: bold;
-  margin-right: 2%;
-}
-
-.date-text {
-  font-size: 1rem;
-  color: #8f8f8f;
-}
-
 .description {
-  font-size: 0.9rem;
-  color: #8f8f8f;
-  margin-bottom: 1rem;
+  padding-top: 3vh;
 }
-
-.content-button {
-  display: flex;
-  align-items: center;
+.button {
+  bottom: 3vh;
+  right: 5vw;
+  position: absolute;
+  text-decoration: none;
+  transition: .5s;
 }
-
-.arrow-button {
-  width: 3rem;
-  height: 3rem;
-  background-color: #0051b1;
-  color: white;
-  font-size: 1.5rem;
-  font-weight: bold;
-  border: none;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, background-color 0.3s ease;
+svg {
+  width: 200%;
+  height: 200%;
+  animation: arrow 2s infinite;
 }
-
-.arrow-button:hover {
-  background-color: #003d91;
-  transform: scale(1.1);
+@keyframes arrow {
+  0% {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(10px);
+  }
 }
 </style>
