@@ -26,7 +26,7 @@
   <div class="footer">
     <HomePageFooter/>
   </div>
-  <div class="jump-to-top" @click="scrollToTop">
+  <div :class="{'jump-to-top-fadein': this.showJumpToTop, 'jump-to-top': true, 'jump-to-top-fadeout': !this.showJumpToTop}" @click="scrollToTop">
     <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1F3979"><path d="M480-528 296-344l-56-56 240-240 240 240-56 56-184-184Z"/></svg>
   </div>
 </template>
@@ -55,11 +55,30 @@ export default {
     HomePageBanner,
     HomePageContact
   },
+  data() {
+    return {
+      showJumpToTop: false
+    }
+  },
   mounted () {
+    // 初始化时滚动到导航栏
     const nav = document.querySelector('.nav');
     if(nav){
       nav.scrollIntoView({ behavior: 'smooth' });
     }
+
+    // 滚动到Solgen后再时显示回到顶部按钮
+    window.addEventListener('scroll', () => {
+      const slogan = document.querySelector('.slogan');
+      if(slogan){
+        const sloganTop = slogan.getBoundingClientRect().top-100;
+        if(sloganTop < 0){
+          this.showJumpToTop = true;
+        }else{
+          this.showJumpToTop = false;
+        }
+      }
+    });
   },
   methods: {
     scrollToTop() {
@@ -135,12 +154,39 @@ export default {
   justify-content: center;
   align-items: center;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
-  opacity: .7;
+  opacity: 0;
+  cursor: pointer;
+  pointer-events: none;
   transition: .5s;
 }
 .jump-to-top:hover {
   opacity: 1;
 }
+.jump-to-top-fadein {
+  pointer-events: auto;
+  animation: jump-to-top-fadein 0.5s forwards;
+}
+.jump-to-top-fadeout {
+  pointer-events: none;
+  animation: jump-to-top-fadeout 0.5s forwards;
+}
+@keyframes jump-to-top-fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.7;
+  }
+}
+@keyframes jump-to-top-fadeout {
+  0% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 svg {
   width: 150%;
   height: 150%;
