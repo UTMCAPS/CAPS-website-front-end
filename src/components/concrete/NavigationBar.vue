@@ -1,35 +1,40 @@
-<script setup>
-
-</script>
-
 <template>
   <div class="container">
-    <div class="navigation-item">
-      <router-link href="#home" to="/">Home</router-link>
+    <div class="navigation-item" @click="this.$router.push('/')">
+      <p>Home</p>
     </div>
-    <div class="navigation-item">
-      <router-link to="/people">About Us</router-link>
+    <div class="navigation-item" @click="this.$router.push('/people')">
+      <p>About Us</p>
     </div>
-    <div class="navigation-item">
-      <router-link href="#event" to="/event" >Event</router-link>
+    <div class="navigation-item" @click="this.$router.push('/event')">
+      <p>Event</p>
     </div>
-    <div class="logo">
-      <img src="@/assets/png/homePage/logo-blue-s.png" alt="logo" />
-      <h1 class="title">
-        UTMCAPS
-      </h1>
+    <div class="logo" @click="logoClicked">
+      <img class="logo-img" src="@/assets/UTMCAPS-logo.svg" alt="logo" />
     </div>
-    <div class="navigation-item">
-      <router-link href="#ropList" to="/utmropList">Resources</router-link>
+    <div class="navigation-item" @click="this.$router.push('/utmropList')">
+      <p>Resources</p>
     </div>
-    <div class="navigation-item">
-      <router-link href="#contact-us" to="/contact-us">Media</router-link>
+    <div class="navigation-item" @click="this.$router.push('/contact-us')">
+      <p>Media</p>
     </div>
-    <div class="navigation-item">
-      <router-link href="#contact-us" to="/contact-us">Contact Us</router-link>
+    <div class="navigation-item" @click="this.$router.push('/contact-us')">
+      <p>Contact Us</p>
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  name: "NavigationBar",
+  methods: {
+    logoClicked() {
+      this.$emit('logoClicked');
+      this.$router.push('/');
+    }
+  },
+};
+</script>
 
 <style scoped>
 body {
@@ -56,6 +61,7 @@ body {
   border-radius: 20px;
 }
 .navigation-item:hover {
+  cursor: pointer;
   background: rgba(0, 0, 0, 0.05);
 }
 .logo {
@@ -66,13 +72,19 @@ body {
   justify-content: center;
   align-items: center;
 }
-a {
+.logo:hover {
+  cursor: pointer;
+}
+.logo-img {
+  scale: 1.6;
+}
+p {
   text-decoration: none;
   color: #000000;
   border: 2px solid transparent;
   transition: .5s;
 }
-.navigation-item:hover a {
+.navigation-item:hover p {
   border-bottom: 2px solid rgba(34, 72, 134, 0.5);
 }
 img {
