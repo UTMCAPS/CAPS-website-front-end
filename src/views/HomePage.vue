@@ -1,10 +1,4 @@
 <template>
-  <div class="contact">
-    <HomePageContact/>
-  </div>
-  <div class="nav">
-    <NavigationBar/>
-  </div>
   <div class="banner">
     <HomePageBanner/>
   </div>
@@ -32,7 +26,6 @@
 </template>
 
 <script>
-import HomePageContact from "@/components/homePage/HomePageContact.vue";
 import HomePageBanner from "@/components/homePage/HomePageBanner.vue";
 import HomePageSlogan from "@/components/homePage/HomePageSlogan.vue";
 import HomePageAboutUs from "@/components/homePage/HomePageAboutUs.vue";
@@ -40,20 +33,17 @@ import HomePageEventsThisWeek from "@/components/homePage/HomePageEventsThisWeek
 import HomePageUpcomingEvents from "@/components/homePage/HomePageUpcomingEvents.vue";
 import HomePageJoinUs from "@/components/homePage/HomePageJoinUs.vue";
 import HomePageFooter from "@/components/homePage/HomePageFooter.vue";
-import NavigationBar from "@/components/concrete/NavigationBar.vue";
 
 export default {
   name: "HomePage",
   components: {
-    NavigationBar,
     HomePageFooter,
     HomePageJoinUs,
     HomePageUpcomingEvents,
     HomePageEventsThisWeek,
     HomePageAboutUs,
     HomePageSlogan,
-    HomePageBanner,
-    HomePageContact
+    HomePageBanner
   },
   data() {
     return {
@@ -61,12 +51,6 @@ export default {
     }
   },
   mounted () {
-    // 初始化时滚动到导航栏
-    const nav = document.querySelector('.nav');
-    if(nav){
-      nav.scrollIntoView({ behavior: 'smooth' });
-    }
-
     // 滚动到Solgen后再时显示回到顶部按钮
     window.addEventListener('scroll', () => {
       const slogan = document.querySelector('.slogan');
@@ -93,19 +77,6 @@ export default {
 </script>
 
 <style scoped>
-.contact {
-  width: 100vw;
-  height: 5vh;
-  background: #1F3979;
-}
-.nav {
-  width: 100vw;
-  height: 10vh;
-  background: #EEEEEE;
-  position: sticky;
-  top: 0;
-  z-index: 1;
-}
 .banner {
   width: 100vw;
   height: 90vh;
